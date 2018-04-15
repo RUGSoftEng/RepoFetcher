@@ -1,0 +1,13 @@
+{
+  "name": "repo-fetcher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Daan Raatjes",
+  "dependencies": {
+    "github-api": "~3.0.0"
+  },
+  "scripts": {
+    "start": "npm install && node index.js"
+  }
+}

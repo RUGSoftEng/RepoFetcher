@@ -8,7 +8,7 @@ const folder = "docs";
 /* Where we should store the downloaded content */
 const destination = "./docs";
 /* Prefix to use as a filter for the repo name */
-const repoPrefix = (new Date()).getFullYear();
+const repoPrefix = (new Date()).getFullYear().toString();
 /* What branch to fetch from */
 const branch = "master";
 
@@ -22,7 +22,7 @@ org.getRepos(function (err, repos) {
 		throw err;
 	}
 
-	repos = repos.filter(repo => repo.name.substring(0, 5) === repoPrefix);
+	repos = repos.filter(repo => repo.name.substring(0, repoPrefix.length) === repoPrefix);
 	console.log(`Found ${repos.length} repo's.`);
 	//repos = [repos[repos.length - 1]];
 	repos.forEach(function (repo) {

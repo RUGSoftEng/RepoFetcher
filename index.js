@@ -8,7 +8,7 @@ const folder = "docs";
 /* Where we should store the downloaded content */
 const destination = "./docs";
 /* Prefix to use as a filter for the repo name */
-const repoPrefix = "2018-";
+const repoPrefix = (new Date()).getFullYear();
 /* What branch to fetch from */
 const branch = "master";
 
